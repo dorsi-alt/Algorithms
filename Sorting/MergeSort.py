@@ -1,5 +1,7 @@
 num_array = list()
+
 print("MERGE SORT ALGORITHM")
+
 num = int(input("Enter how many elements do you need to sort:\n"))
 
 print('Enter numbers in array: ')
@@ -30,15 +32,15 @@ def mergeSort(myList):
         while i < len(left) and j < len(right):
             if left[i] <= right[j]:
               # The value from the left half has been used
+              # merging back into one array
               myList[k] = left[i]
               # Move the iterator forward
               i += 1
             else:
-                myList[k] = right[j]
+                myList[k] = right[j] 
                 j += 1
             # Move to the next slot
             k += 1
-
         # For all the remaining values
         while i < len(left):
             myList[k] = left[i]
